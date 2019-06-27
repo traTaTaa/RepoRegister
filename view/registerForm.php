@@ -3,7 +3,7 @@
 <div class="container">
 <form action="register_user" method="post">
    <?php echo($data); ?>
-   <h4>Registration</h4>
+   <h4>Регистрация</h4>
     <?php if(isset($_SESSION["done"])){ ?><div class="alert alert-success" role="alert"> <?php echo $_SESSION["done"]; ?> </div><?php }?>
     <?php if(isset($_SESSION["err"])){ ?><div class="alert alert-danger" role="alert"> <?php echo $_SESSION["err"]; ?> </div><?php }
     unset($_SESSION['done']);
@@ -19,7 +19,7 @@
 
 
 <button class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</button>
-    <button class="btn btn-lg btn-primary btn-block" type="sumit">Авторизация</button>
+    <a href="loginForm" class="btn btn-lg btn-primary btn-block" type="sumit">Авторизация</a>
 <!--    <button type="submit">Register</button>-->
 
 </form>

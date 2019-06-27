@@ -31,6 +31,11 @@ class Bootstrap  {
                 "MethodName" => "createUsers",
                 "namespace" => 'controllers/Registration.php'
             ],
+            '/loginForm' => [
+                "ClassName" => "Login",
+                "MethodName" => "loginUserForm",
+                "namespace" => 'controllers/Login.php'
+            ],
         ];
 
         if (isset($router[$url])){

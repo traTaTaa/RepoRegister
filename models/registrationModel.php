@@ -20,7 +20,7 @@ public function addUserPublic ($userData){
         $_SESSION["err"] = "Ошибка регистрации";
     }
 
-   header("refresh: 0; http://register/registration");
+header("refresh: 0 ; http://register/registration");
 
 }
 
