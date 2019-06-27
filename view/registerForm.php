@@ -16,13 +16,10 @@
     </br>
     <input type="text" name="city" class="form-control" placeholder="city" required>
 </br>
-<!--    <label>Login:</label><input type="text" placeholder="login" name="login" value=""> </br>-->
-<!--    <label>Password:</label><input type="password" placeholder="password" name="pass" > </br>-->
-<!--    <label>Email:</label><input type="text" placeholder="email" name="email" > </br>-->
-<!--    <label>City:</label><input type="text" placeholder="city" name="city" > </br>-->
 
-<button class="btn btn-lg btn-primary btn-block" type="sumit">Register</button>
-    <button class="btn btn-lg btn-primary btn-block" type="sumit">Login</button>
+
+<button class="btn btn-lg btn-primary btn-block" type="sumit">Регистрация</button>
+    <button class="btn btn-lg btn-primary btn-block" type="sumit">Авторизация</button>
 <!--    <button type="submit">Register</button>-->
 
 </form>
