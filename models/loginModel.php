@@ -3,25 +3,26 @@
 
 class loginModel
 {
-public function loginModel (){
-    session_start();
+    public function loginUserModel()
+    {
+        session_start();
 
-    $conn = new PDO ('mysql:host=localhost;dbname=registration','root','');
+        $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
 
-    if (isset($_POST['login'])){
-        $userLogin = $_POST['login'];
-        $UserPassword = $_POST['pass'];
+        if (isset($_POST['login'])) {
+            $userLogin = $_POST['login'];
+            $UserPassword = $_POST['pass'];
 
 
-        if(empty($userLogin) && empty($UserPassword)) {
-            $message = "Username/Password con't be empty";
-        }
-        else
-        {
+//        if(empty($userLogin) && empty($UserPassword)) {
+//            $message = "Username/Password con't be empty";
+//        }
+//        else
+//        {
             $sql = "SELECT userLogin, UserPassword FROM user WHERE userLogin=? AND UserPassword=? ";
             $query = $conn->prepare($sql);
-            $query->execute(array($userLogin,$UserPassword));
-
+            $query->execute(array($userLogin, $UserPassword));
+    $_SESSION['testLogin'] = $query;
             if($query->rowCount() >= 1) {
                 $_SESSION['userLogin'] = $userLogin;
                 header("location: login.php");
@@ -34,5 +35,4 @@ public function loginModel (){
         }
     }
 
-}
 }

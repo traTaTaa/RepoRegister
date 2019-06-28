@@ -1,7 +1,7 @@
 
 <title>Авторизация</title>
 <div class="container">
-<form action="????**********???????" method="post">
+<form action="loginFormTest" method="post">
 <!--   --><?php //echo($data); ?>
    <h4>Регистрация</h4>
 <!--    --><?php //if(isset($_SESSION["done"])){ ?><!--<div class="alert alert-success" role="alert"> --><?php //echo $_SESSION["done"]; ?><!-- </div>--><?php //}?>
