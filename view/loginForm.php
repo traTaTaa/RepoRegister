@@ -1,9 +1,9 @@
 
 <title>Авторизация</title>
 <div class="container">
-<form action="loginFormTest" method="post">
+<form action="loginUserForm" method="post">
 <!--   --><?php //echo($data); ?>
-   <h4>Регистрация</h4>
+   <h4>Авторизация</h4>
 <!--    --><?php //if(isset($_SESSION["done"])){ ?><!--<div class="alert alert-success" role="alert"> --><?php //echo $_SESSION["done"]; ?><!-- </div>--><?php //}?>
 <!--    --><?php //if(isset($_SESSION["err"])){ ?><!--<div class="alert alert-danger" role="alert"> --><?php //echo $_SESSION["err"]; ?><!-- </div>--><?php //}
 //    unset($_SESSION['done']);

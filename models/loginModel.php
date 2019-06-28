@@ -3,36 +3,37 @@
 
 class loginModel
 {
-    public function loginUserModel()
+    public function loginUserModel($postMassLog)
     {
         session_start();
-
+        var_dump($_SESSION["testDump"]);
+        die;
         $conn = new PDO ('mysql:host=localhost;dbname=registration', 'root', '');
 
-        if (isset($_POST['login'])) {
-            $userLogin = $_POST['login'];
-            $UserPassword = $_POST['pass'];
+
+        if (isset($postMassLog['login'])) {
+            $userLogin = $postMassLog['login'];
+            $UserPassword = $postMassLog['pass'];
 
 
-//        if(empty($userLogin) && empty($UserPassword)) {
-//            $message = "Username/Password con't be empty";
-//        }
-//        else
-//        {
-            $sql = "SELECT userLogin, UserPassword FROM user WHERE userLogin=? AND UserPassword=? ";
+
+            $sql = "SELECT login, pass FROM user WHERE login=? AND pass=? ";
             $query = $conn->prepare($sql);
-            $query->execute(array($userLogin, $UserPassword));
-    $_SESSION['testLogin'] = $query;
-            if($query->rowCount() >= 1) {
-                $_SESSION['userLogin'] = $userLogin;
-                header("location: login.php");
-            }
-            else
-            {
-                $message = "Username/Password is wrong";
-                echo $message;
-            }
-        }
-    }
+            $query->execute([
+                ':login' => $postMassLog['login'],
+                ':pass' => $postMassLog["pass"]
+            ]);
+        }}}
+//            if($query->rowCount() >= 1) {
+//                $_SESSION['userLogin'] = $userLogin;
+//
+//                header("location: login.php");
+//            }
+//            else
+//            {
+//                $message = "Username/Password is wrong";
+//                echo $message;
+//            }
+//        }
 
-}
+

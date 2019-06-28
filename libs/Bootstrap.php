@@ -36,10 +36,10 @@ class Bootstrap  {
                 "MethodName" => "loginUserForm",
                 "namespace" => 'controllers/Login.php'
             ],
-            '/loginFormTest' => [
-                "ClassName" => "Index",
-                "MethodName" => "Start",
-                "namespace" => 'controllers/index.php'
+            '/loginUserForm' => [
+                "ClassName" => "login",
+                "MethodName" => "loginDb",
+                "namespace" => 'controllers/Login.php'
             ],
         ];
 

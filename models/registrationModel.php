@@ -14,6 +14,7 @@ public function addUserPublic ($userData){
         ':email' => $userData['email'],
         ':city' => $userData['city']
     ]);
+
     if (is_bool($var) === true) {
         $_SESSION["done"] = "Регистрация успешна";
     }else{
